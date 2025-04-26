@@ -36,7 +36,7 @@ model = tnt.layer.Sequential(tnt.layer.LinearTanh(1, 3), tnt.layer.LinearTanh(3,
 trainer = tnt.trainer.Trainer(model, 1e-3, 300, tnt.loss.MSE())
 trainer.train(x_train, y_train) 
 
-# Evaluate the dataset
+# Evaluate the model
 y_pred = model.predict(x_test)
 print("MSE:", tnt.loss.MSE().forward(y_pred, y_test))
 ```
